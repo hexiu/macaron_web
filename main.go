@@ -1,15 +1,20 @@
 package main
 
 import (
-	"fmt"
+	// "fmt"
+	// "github.com/Unknwon/goconfig"
 	"gopkg.in/macaron.v1"
+	"macaron/modules/initConf"
 )
 
+func init() {
+	initConf.InitConf()
+}
+
 func main() {
-	fmt.Println("this is test.")
 	m := macaron.Classic()
 	m.Get("/", func() string {
-		return "hello"
+		return "this is success!"
 	})
 	m.Run()
 }
