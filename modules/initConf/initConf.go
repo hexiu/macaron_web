@@ -5,10 +5,10 @@ import (
 	"github.com/Unknwon/goconfig"
 )
 
-func InitConf() {
+func InitConf() (conf *goconfig.ConfigFile) {
 	conf, err := goconfig.LoadConfigFile("conf/app.ini")
 	if err != nil {
 		fmt.Println(err)
 	}
-	fmt.Println(conf)
+	return
 }
