@@ -14,5 +14,4 @@ func HomeHandler(ctx *macaron.Context, logger *log.Logger) {
 	ctx.Data["NUM3"] = 500
 
 	ctx.HTML(200, "index")
-	// return "the request is :" + ctx.Req.RequestURI
 }
