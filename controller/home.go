@@ -6,9 +6,11 @@ import (
 )
 
 func HomeHandler(ctx *macaron.Context, logger *log.Logger) {
-	logg := ctx.Req.Method
-	logger.Println(" \n\n\n ", string(logg), "\n\n\n\n\n\n")
-	// ctx.Data["TEST"] = "ZYPC"
+	// logg := ctx.Req.Method
+	// logger.Println(" \n\n\n ", string(logg), "\n\n\n\n\n\n")
+	ctx.Data["TITLE"] = "ZYPC"
+	ctx.Data["WebSiteName"] = "西邮Online"
+
 	ctx.Data["NUM1"] = 300
 	ctx.Data["NUM2"] = 200
 	ctx.Data["NUM3"] = 500

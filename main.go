@@ -30,6 +30,8 @@ func main() {
 	m.Get("/", controller.HomeHandler)
 	m.Get("/test", controller.TestHandler)
 	m.Get("/message", controller.MessageHandler)
-	m.Get("/topic", controller.TopicAddHandler)
+	m.Get("/topic", controller.TopicHandler)
+	m.Post("/topic", controller.TopicAddHandler)
+	m.Get("/topiclist", controller.TopicListHandler)
 	m.Run()
 }
