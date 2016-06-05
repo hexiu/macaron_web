@@ -1,21 +1,21 @@
 {{template "header" .}}
 <br>
-{{.Hi}}
+
 {{.Listtopic}}
 <div class="container">
     <h1>文章列表</h1>
     {{range .Topics}}
-   文章标题：
-    {{.Title}}
-   文章分类：
-    {{.Category}}
-    文章标签：
-    {{.Labels}}
-   文章摘要：
-    {{.Condense}}
+   <h5>文章标题：</h5>
+    {{.Title}} <br><br><br>
+   <h5>文章分类：</h5>
+    {{.Category}}<br><br><br>
+    <h5>文章标签：</h5>
+    {{.Labels}}<br><br><br>
+   <h5>文章摘要：</h5>
+    {{.Condense}}<br><br><br>
     <br>{{end}}
-    </div>
-<!-- {{.Content}}
+</div>
+ <!-- {{.Content}}
  --><!-- <script type="text/javascript" src="http://cdn.staticfile.org/jquery/3.0.0-alpha1/jquery.min.js"></script>
 -->
 <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
